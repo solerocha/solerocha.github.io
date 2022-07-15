@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Panda Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="images/logo3.ico">    
+    <script src="https://kit.fontawesome.com/9712056dab.js" crossorigin="anonymous"></script>
+</head>
+<body>
+        <!-- Sección del Header-->
+        <header>
+            <!-- Imagen mediante etiquetas HTML -->
+            <nav>
+                <ul class="nav-logo">
+                    <li><a href="index.html">
+                        <img src="images/prueba2.png" width="100" height="100" alt="Panda Store">
+                    </a></li>
+                </ul>
+                <ul class="nav-menu-items">
+                    <li><a href="movies.html" title="Movies">Peliculas</a></li>
+                    <li><a href="series.html" title="Series">Series</a></li>
+                    <li><a href="comics.html" title="Comics">Comics</a></li>
+                    <li><a href="games.html" title="Juegos">Juegos</a></li>
+                </ul>
+                <ul class="nav-search">
+                    <form>
+                        <input type="text" id="header-search" class="form-control" placeholder="Search" autocomplete="off"
+                            aria-label="Search">
+                    </form>
+                </ul>
+                <ul class="nav-login">
+                    <li><a href="login.html" title="Iniciar Sesión">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <!-- Sección del Main principal -->
+        <main class="main-reg">
+            <form action="" method="POST" id="form-reg">
+                <div class="form-main">
+                    <h1>Registro</h1>
+                    <div class="grupo" id="grupo-form">
+                        <input type="text" name="name" id="name" required><span class="barra"></span>
+                        <label for="">Nombre</label>
+                    </div>        
+                    <div class="grupo" id="grupo-form">
+                        <input type="email" name="email" id="email" required><span class="barra"></span>
+                        <label for="">Email</label>
+                    </div>        
+                    <div class="grupo" id="grupo-form">
+                        <input type="password" name="password" id="password" required><span class="barra"></span>
+                        <label for="">Password</label>
+                    </div>        
+                    <button type="submit" class="btn-reg" id="btn-btn">Registrate</button>
+                    <p class="warnings" id="warnings"></p>
+                </div>
+            </form>
+            <script src="js/register.js"></script>
+        </main> 
+    
+        <!-- Sección del Footer -->
+        <footer class="panda-footer">
+            <div class="footer-1">
+                <div class="icons-social">
+                    <a href="https://www.twitter.com" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="comeback-top">
+                    <a href="#top">Volver arriba</a>
+                </div>
+            </div>
+            
+            <div class="legal-end-footer">
+                <span>Términos de servicio</span>
+                <span>Política de privacidad</span>
+                <span>Política de reembolso</span>
+                <span>Seguridad</span>
+            </div>
+            <div class="legal-end-footer">
+                <span>Todos los derechos reservados | @2022, Inc.</span>
+            </div>
+        </footer>
+    
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

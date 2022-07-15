@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {    
+    margin: 30px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(/client/images/fondo.png);
+}
+
+a {
+    text-decoration: none; /*No quiero ninguna etiqueta con ancla*/
+}
+
+/* Header -------------------------------- */
+header {
+    width: 100%;
+    background-color: #1C191A;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+header nav {
+    font-size:larger;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100px;
+}
+
+header nav .nav-logo {
+    border-radius: 5px;
+    width: 10%;
+    display: flex;
+    margin: 0;
+    justify-content: left;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+header nav .nav-menu-items {
+    height: auto;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    text-transform: uppercase;
+}
+
+header nav .nav-search {
+    height: auto;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    width: 15%;
+}
+
+header nav .nav-login {
+    height: auto;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+}
+
+header nav .nav-register {
+    height: auto;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+}
+
+.nav-logo li  a img {
+    display: flex;
+    object-fit: contain;
+}
+
+nav .nav-menu-items a {
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.4s;
+}
+
+nav .nav-login a {
+    margin-right: 0;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.4s;
+}
+
+nav .nav-register a {
+    margin-right: 0;
+    background-color: rgb(74, 177, 172);
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.4s;
+}
+
+.nav-logo img:hover {
+    transform: scale(0.9)
+}
+
+.nav-login li a:hover {
+    transform: scale(1.2);
+    color: white;
+    background-color: black;
+}
+
+.nav-register li a:hover {
+    transform: scale(1.2);
+    color: white;
+    background-color: black;
+}
+
+.nav-menu-items li a:hover {
+    transform: scale(1.2);
+    color: #000000;
+    background-color: #ffffff;
+}
+
+/* Main ------------------ */
+.container-main {
+    margin: 10px;
+    display: grid;
+    gap: 1.6em; /*Añade un espaciado entre los items*/
+    grid-template-columns: repeat(5, 1fr); /* Creo 5 columnas*/
+    background-color: transparent;
+}
+
+.container-main > .header-main, .container-main > .content-main, .container-main >.sidebar-main, .container-main > .div-post-main {
+    padding: 20px;
+    text-align: center;
+}
+
+.container-main > .header-main {
+    color: white;
+    grid-column: 1/-1;
+}
+
+.container-main > .content-main {
+    color: #ffffff;
+    grid-column: span 3; /*Me indica que abarca 3 columnas*/
+    grid-row: span 4; 
+    padding: 5px;
+}
+
+.container-main > .div-main {    
+    padding: 20px;
+    margin-top: 5px;
+    transition: all 0.5s ease;
+}
+
+.content-main .div-main h3,
+.content-main .div-main img:hover {
+    padding: 10px;   
+}
+
+.container-main > .sidebar-main {
+    grid-column: span 2;
+    grid-row: span 4;    
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-main > .div-post-main {    
+    color: #ffffff;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;    
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.container-main>.div-post-main:hover, .content-main>.div-main:hover {
+    cursor: pointer;
+    color: #000000;
+    background: #ffffff;
+}
+
+/* Footer ------------------ */
+.panda-footer {
+    background-color: hsl(340, 6%, 10%);
+    color: white;
+    text-align: center;    
+    width: 100%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-align: center;
+}
+
+.panda-footer div {
+    margin-bottom: 15px;
+    margin-top: 2px;
+}
+
+.legal-end-footer span{
+    margin-right: 50px;
+}
+
+.icons-social a{
+    margin-right: 20px;
+}
+
+.footer-1 {
+    display: grid;
+    gap: 1.6em; /*Añade un espaciado entre los items*/
+    grid-template-columns: repeat(2, 1fr); /* Creo 2 columnas*/
+}
+
+.panda-footer div .comeback-top {
+    color: white;
+}
+
+/* Responsive */
+/*Dispositivos móviles
+@media screen and (max-width: 640px){
+    header>nav>ul{
+        justify-content: space-around;
+        flex-flow: row;
+    }
+
+    .panda-footer {
+        justify-content: space-around;
+    }
+}*/
+
+/*Tablets
+@media screen and (min-width:640px) and (max-width: 1280px){
+    header {
+        justify-content: space-around;
+    }
+
+    .panda-footer {
+        justify-content: space-around;
+    }
+}*/
+
+/*Desktop
+@media screen and (min-width: 1280px){
+    
+}*/
